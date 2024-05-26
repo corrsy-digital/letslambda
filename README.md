@@ -1,5 +1,8 @@
 # LetsLambda #
 
+
+Modified - 26th May 2024 - part 2
+
 A python script that gets to renew your SSL certificates from AWS Lambda via DNS challenge using [Let's Encrypt](https://letsencrypt.org/) services. It stores your keys and certificates in a S3 bucket. If the keys don't exists, it generates them and re-uses them later (useful for [public key pinning](https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning)).
 
 All in all, the script talks to [Let's Encrypt](https://letsencrypt.org/) and Amazon [Route53](https://aws.amazon.com/route53/) (for the DNS challenge), Amazon [S3](https://aws.amazon.com/s3/) and Amazon [IAM](https://aws.amazon.com/iam/) (to store your certificates) and Amazon [Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/). And optionally, Amazon [KMS](https://aws.amazon.com/kms/) can be used to encrypt your data in your S3 bucket.
